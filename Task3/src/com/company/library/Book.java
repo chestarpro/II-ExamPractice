@@ -1,4 +1,4 @@
-package com.company;
+package com.company.library;
 
 public class Book {
     private String author;
@@ -54,11 +54,14 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "author='" + author + '\'' +
-                ", id=" + id +
-                ", name='" + name + '\'' +
-                ", year=" + year +
-                '}';
+        return String.format(
+                        "Название книги: %s |" +
+                        " Автор книги: %s |" +
+                        " ID книги: %s |" +
+                        " Год выпуска книги: %s",
+                        name,
+                        author,
+                        id,
+                        year);
     }
 }
