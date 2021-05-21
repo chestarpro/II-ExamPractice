@@ -2,13 +2,12 @@ package com.company;
 
 public class LaFinta extends Pizza {
     private boolean isWithMushrooms;
-    private static int countLaFinta;
 
     public LaFinta(){
-        countLaFinta++;
+
     }
 
-    public LaFinta(double price, double weight, boolean isWithMushrooms) {
+    public LaFinta(int price, int weight, boolean isWithMushrooms) {
         super(price, weight);
         this.isWithMushrooms = isWithMushrooms;
 
@@ -25,7 +24,7 @@ public class LaFinta extends Pizza {
     @Override
     public void cook() {
         super.cook();
-        System.out.println(" | (La Finta №" + countLaFinta +")");
+        System.out.println(" | (La Finta)");
     }
 
     @Override

@@ -3,23 +3,20 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Pepperoni pepperoni = new Pepperoni(2,2, true);
+        Pepperoni pepperoni = new Pepperoni(500,700, true);
         pepperoni.cook();
         pepperoni.deliver();
 
-        Margarita margarita = new Margarita(3, 3, true);
+        Margarita margarita = new Margarita(700, 750, true);
         margarita.cook();
         margarita.deliver();
 
-        LaFinta laFinta = new LaFinta(4, 5, false);
+        LaFinta laFinta = new LaFinta(1000, 1200, false);
         laFinta.cook();
         laFinta.deliver();
 
-        Margarita margarita2 = new Margarita(5, 3, false);
+        Margarita margarita2 = new Margarita(900, 1100, false);
         margarita2.cook();
         margarita2.deliver();
-
-        System.out.println(Margarita.getIdPizza());
-
     }
 }

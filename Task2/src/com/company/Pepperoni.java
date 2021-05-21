@@ -2,16 +2,14 @@ package com.company;
 
 public class Pepperoni extends Pizza {
     private boolean isSpicy;
-    private static  int countPepperoni;
 
     public Pepperoni(){
-        countPepperoni++;
+
     }
 
-    public Pepperoni(double price, double weight, boolean isSpicy) {
+    public Pepperoni(int price, int weight, boolean isSpicy) {
         super(price, weight);
         this.isSpicy = isSpicy;
-        countPepperoni++;
     }
 
     public boolean isSpicy() {
@@ -24,7 +22,8 @@ public class Pepperoni extends Pizza {
 
     @Override
     public void cook() {
-        System.out.println("Cook pizza №"  + getIdPizza() + " | (Margarita №" + countPepperoni +")");
+        super.cook();
+        System.out.println(" | (Margarita)");
     }
 
     @Override

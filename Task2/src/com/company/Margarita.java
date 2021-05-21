@@ -2,13 +2,12 @@ package com.company;
 
 public class Margarita extends Pizza {
     private boolean isWithMeat;
-    private static int countMargarita;
 
     public Margarita(){
 
     }
 
-    public Margarita(double price, double weight, boolean isWithMeat) {
+    public Margarita(int price, int weight, boolean isWithMeat) {
         super(price, weight);
         this.isWithMeat = isWithMeat;
     }
