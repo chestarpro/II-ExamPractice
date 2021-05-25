@@ -18,5 +18,6 @@ public class Main {
         Margarita margarita2 = new Margarita(900, 1100, false);
         margarita2.cook();
         margarita2.deliver();
+
     }
 }

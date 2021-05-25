@@ -1,6 +1,7 @@
 package com.company;
 
 public class Pepperoni extends Pizza {
+    private static int idPepperoni;
     private boolean isSpicy;
 
     public Pepperoni(){
@@ -10,6 +11,14 @@ public class Pepperoni extends Pizza {
     public Pepperoni(int price, int weight, boolean isSpicy) {
         super(price, weight);
         this.isSpicy = isSpicy;
+    }
+
+    public static int getIdPepperoni() {
+        return idPepperoni;
+    }
+
+    public static void setIdPepperoni(int idPepperoni) {
+        Pepperoni.idPepperoni = idPepperoni;
     }
 
     public boolean isSpicy() {
@@ -22,8 +31,9 @@ public class Pepperoni extends Pizza {
 
     @Override
     public void cook() {
+        idPepperoni++;
         super.cook();
-        System.out.println(" | (Margarita)");
+        System.out.println(" | Pepperoni №" + idPepperoni);
     }
 
     @Override

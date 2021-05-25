@@ -1,6 +1,7 @@
 package com.company;
 
 public class Margarita extends Pizza {
+    private static int idMargarita;
     private boolean isWithMeat;
 
     public Margarita(){
@@ -10,6 +11,14 @@ public class Margarita extends Pizza {
     public Margarita(int price, int weight, boolean isWithMeat) {
         super(price, weight);
         this.isWithMeat = isWithMeat;
+    }
+
+    public static int getIdMargarita() {
+        return idMargarita;
+    }
+
+    public static void setIdMargarita(int idMargarita) {
+        Margarita.idMargarita = idMargarita;
     }
 
     public boolean isWithMeat() {
@@ -22,8 +31,9 @@ public class Margarita extends Pizza {
 
     @Override
     public void cook() {
+        idMargarita++;
         super.cook();
-        System.out.println(" | (Margarita)");
+        System.out.println(" | Margarita №" + idMargarita);
     }
 
     @Override

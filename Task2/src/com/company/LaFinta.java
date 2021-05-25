@@ -1,6 +1,7 @@
 package com.company;
 
 public class LaFinta extends Pizza {
+    private static int idLaFinta;
     private boolean isWithMushrooms;
 
     public LaFinta(){
@@ -10,7 +11,14 @@ public class LaFinta extends Pizza {
     public LaFinta(int price, int weight, boolean isWithMushrooms) {
         super(price, weight);
         this.isWithMushrooms = isWithMushrooms;
+    }
 
+    public static int getIdLaFinta() {
+        return idLaFinta;
+    }
+
+    public static void setIdLaFinta(int idLaFinta) {
+        LaFinta.idLaFinta = idLaFinta;
     }
 
     public boolean isWithMushrooms() {
@@ -23,8 +31,9 @@ public class LaFinta extends Pizza {
 
     @Override
     public void cook() {
+        idLaFinta++;
         super.cook();
-        System.out.println(" | (La Finta)");
+        System.out.println(" | La Finta №" + idLaFinta);
     }
 
     @Override
